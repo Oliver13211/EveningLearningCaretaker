@@ -16,7 +16,6 @@ namespace EveningLearningCaretaker
             {
                 e.Cancel = true;    //取消"关闭窗口"事件
                 this.WindowState = FormWindowState.Minimized;    //使关闭时窗口向右下角缩小的效果
-                notifyIcon1.Visible = true;
                 this.Hide();
                 return;
             }
@@ -24,9 +23,20 @@ namespace EveningLearningCaretaker
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            notifyIcon1.Visible = false;
             this.Show();
             WindowState = FormWindowState.Normal;
+            this.Focus();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void 还原窗口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
             this.Focus();
         }
     }

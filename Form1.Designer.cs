@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             notifyIcon1 = new NotifyIcon(components);
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            还原窗口ToolStripMenuItem = new ToolStripMenuItem();
+            退出ToolStripMenuItem = new ToolStripMenuItem();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -46,9 +50,32 @@
             // 
             // notifyIcon1
             // 
+            notifyIcon1.ContextMenuStrip = contextMenuStrip1;
             notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
             notifyIcon1.Text = "晚自习看护器";
+            notifyIcon1.Visible = true;
             notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { 还原窗口ToolStripMenuItem, 退出ToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(139, 52);
+            // 
+            // 还原窗口ToolStripMenuItem
+            // 
+            还原窗口ToolStripMenuItem.Name = "还原窗口ToolStripMenuItem";
+            还原窗口ToolStripMenuItem.Size = new Size(138, 24);
+            还原窗口ToolStripMenuItem.Text = "还原窗口";
+            还原窗口ToolStripMenuItem.Click += 还原窗口ToolStripMenuItem_Click;
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            退出ToolStripMenuItem.Size = new Size(138, 24);
+            退出ToolStripMenuItem.Text = "退出";
+            退出ToolStripMenuItem.Click += 退出ToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -61,6 +88,7 @@
             MaximizeBox = false;
             Name = "Form1";
             Text = "晚自习看护器";
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -69,5 +97,8 @@
 
         private Label label1;
         private NotifyIcon notifyIcon1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem 还原窗口ToolStripMenuItem;
+        private ToolStripMenuItem 退出ToolStripMenuItem;
     }
 }
