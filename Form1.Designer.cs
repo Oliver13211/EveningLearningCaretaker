@@ -35,6 +35,9 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             还原窗口ToolStripMenuItem = new ToolStripMenuItem();
             退出ToolStripMenuItem = new ToolStripMenuItem();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,11 +80,45 @@
             退出ToolStripMenuItem.Text = "退出";
             退出ToolStripMenuItem.Click += 退出ToolStripMenuItem_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(86, 152);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(179, 215);
+            textBox1.TabIndex = 1;
+            textBox1.TabStop = false;
+            textBox1.Text = "使用说明：\r\n点击右下角的设置按钮进行设置，设置好触发语音提醒的音量阈值与语音后，点X关闭窗口即可\r\n退出方式：\r\n点X键关闭窗口，右击托盘图标并点击“退出”按钮彻底关闭程序";
+            // 
+            // button1
+            // 
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Location = new Point(634, 402);
+            button1.Name = "button1";
+            button1.Size = new Size(10, 10);
+            button1.TabIndex = 0;
+            button1.TabStop = false;
+            button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(672, 383);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 2;
+            button2.Text = "设置";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -100,5 +137,8 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem 还原窗口ToolStripMenuItem;
         private ToolStripMenuItem 退出ToolStripMenuItem;
+        private TextBox textBox1;
+        private Button button1;
+        private Button button2;
     }
 }
