@@ -38,6 +38,8 @@
             textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label2 = new Label();
+            label3 = new Label();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -112,11 +114,31 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(440, 188);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 20);
+            label2.TabIndex = 3;
+            label2.Text = "当前分贝：";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(530, 188);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 20);
+            label3.TabIndex = 4;
+            label3.Text = "db";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -141,5 +163,7 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private Label label2;
+        private Label label3;
     }
 }
