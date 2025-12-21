@@ -91,7 +91,7 @@
             textBox1.Size = new Size(179, 215);
             textBox1.TabIndex = 1;
             textBox1.TabStop = false;
-            textBox1.Text = "使用说明：\r\n点击右下角的设置按钮进行设置，设置好触发语音提醒的音量阈值与语音后，点X关闭窗口即可\r\n退出方式：\r\n点X键关闭窗口，右击托盘图标并点击“退出”按钮彻底关闭程序";
+            textBox1.Text = "使用说明：\r\n点击右下角的设置按钮进行设置，设置好触发语音提醒的音量阈值与语音后，点X关闭窗口即可\r\n退出方式：\r\n右击托盘图标并点击“退出”按钮彻底关闭程序";
             // 
             // button1
             // 
